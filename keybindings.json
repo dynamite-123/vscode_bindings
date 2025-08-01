@@ -101,6 +101,10 @@
         "command": "-workbench.action.chat.newEditSession",
         "when": "chatEditingParticipantRegistered && chatIsEnabled && inChat"
     },
+    {
+        "key": "ctrl+alt+p",
+        "command": "python.execInTerminal-icon"
+    },
     // // EXTRA
     // {
     //     "key": "ctrl+shift+5",
