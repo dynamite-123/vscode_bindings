@@ -1,7 +1,7 @@
 {
     "security.workspace.trust.untrustedFiles": "open",
     "code-runner.runInTerminal": true,
-    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
     "cmake.showOptionsMovedNotification": false,
     "debug.onTaskErrors": "showErrors",
     "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
@@ -31,8 +31,8 @@
         { "before": ["<S-l>"], "commands": [":bnext"] },
 
         // splits
-        { "before": ["leader", "v"], "commands": [":vsplit"] },
-        { "before": ["leader", "s"], "commands": [":split"] },
+        { "before": ["leader", "s", "v"], "commands": [":vsplit"] },
+        { "before": ["leader", "s", "h"], "commands": [":split"] },
 
         // panes
         {
@@ -91,4 +91,31 @@
     "security.allowedUNCHosts": [
         "wsl.localhost"
     ],
+    "vsicons.dontShowNewVersionMessage": true,
+    "remote.autoForwardPortsSource": "hybrid",
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+        },
+        "Command Prompt": {
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "Ubuntu (WSL)": {
+            "path": "C:\\WINDOWS\\System32\\wsl.exe",
+            "args": [
+                "-d",
+                "Ubuntu"
+            ]
+        }
+    },
 }
